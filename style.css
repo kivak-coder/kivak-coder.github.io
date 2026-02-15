@@ -1,0 +1,224 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(135deg, #1a472a, #2d5a2d, #c9a227);
+  background-attachment: fixed;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+h1 {
+  color: #fff;
+  text-align: center;
+  font-family: 'Montserrat', 'Lucida Sans', sans-serif;
+  font-size: 4rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  text-shadow: 3px 3px 0 rgba(0,0,0,0.2);
+  margin: 30px 0;
+  padding: 20px;
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+
+h2 {
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 1.5rem;
+  color: #fff;
+  text-align: center;
+  margin: 20px 0;
+  padding: 15px;
+  background: rgba(0,0,0,0.3);
+  border-radius: 15px;
+  backdrop-filter: blur(5px);
+}
+
+h3 {
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 1.5rem;
+  color: #fff;
+  text-align: center;
+  margin: 20px 0;
+  padding: 15px;
+  background: rgba(0,0,0,0.3);
+  border-radius: 15px;
+  backdrop-filter: blur(5px);
+}
+
+h5 {
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 1rem;
+  margin-left: 25px;
+  color: #687768e8;
+  margin-bottom: 0;
+}
+
+img:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 30px 60px rgba(0,0,0,0.4);
+  border-color: #c9a227;
+}
+
+table {
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 1.2rem;
+  width: 100%;
+  max-width: 1100px;
+  margin: 40px auto;
+  border-collapse: separate;
+  border-spacing: 15px;
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 25px;
+  padding: 20px;
+}
+
+caption {
+  color: #fff;
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 0 rgba(0,0,0,0.3);
+}
+
+td {
+  background: rgba(255, 248, 235, 0.9);
+  padding: 30px 20px;
+  text-align: center;
+  font-weight: 600;
+  color: #1a472a;
+  border-radius: 13px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  transition: all 0.3s ease;
+  font-size: 1.6rem;
+  backdrop-filter: blur(5px);
+  border: 2px solid rgba(255,255,255,0.5);
+  width: 33%;
+}
+
+a {
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 1.5rem;
+  color: #fff;
+  text-align: center;
+  margin: 20px 0;
+  padding: 15px;
+  background: rgba(0,0,0,0.3);
+  border-radius: 15px;
+  backdrop-filter: blur(5px);
+  text-decoration: none;
+}
+
+td:hover {
+  background: #fff;
+  transform: scale(1.05);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+  border-color: #c9a227;
+}
+
+.text-with-pic {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin: 30px 0;
+}
+
+.text-with-pic.reverse {
+  flex-direction: row-reverse;
+}
+
+.text-with-pic .highlight {
+  flex: 1;
+  width: auto;
+  max-width: 50%;
+  padding: 30px;
+  font-size: 1.8rem;
+  font-weight: 550;
+  color: #1a2e1a;
+  background: linear-gradient(145deg, #eaaa42cf, #dfa91ee1);
+  border-radius: 40px;
+  margin-top: 0; /* убираем лишний отступ */
+  margin-left: 5px;
+  margin-right: 15px;
+}
+
+.text-with-pic .in-text {
+  width: 60%;
+  max-width: 600px;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 3px solid rgba(255,255,255,0.3);
+  float: none;
+  margin-left: 15px;
+  margin-right: 5px;
+}
+
+@media (max-width: 768px) {
+  .text-with-pic {
+    flex-direction: column !important;
+  }
+  .text-with-pic .highlight,
+  .text-with-pic .in-text {
+    max-width: 100%;
+    width: 100%;
+  }
+}
+
+.full-width {
+  width: 100%;
+  max-width: 1200px;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  margin: 30px auto;
+  border-radius: 30px;
+  box-shadow: 0 25px 50px rgba(0,0,0,0.5);
+}
+
+p {
+  color: rgba(255,255,255,0.9);
+  text-align: center;
+  font-size: 1.1rem;
+  margin-top: 10px;
+  font-style: italic;
+  text-shadow: 1px 1px 0 rgba(0,0,0,0.2);
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+  
+  .images-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  img {
+    width: 100%;
+    height: 250px;
+  }
+  
+  table {
+    font-size: 1rem;
+  }
+  
+  td {
+    padding: 20px 10px;
+  }
+}
