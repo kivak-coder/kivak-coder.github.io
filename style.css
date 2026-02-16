@@ -257,7 +257,7 @@ td:hover {
 }
 
 /* Адаптивность для мобильных устройств (все правила в одном блоке) */
-@media (all) {
+@media screen {
   h1 {
     font-size: 2rem;
     letter-spacing: 2px;
@@ -313,7 +313,7 @@ td:hover {
   td {
     font-size: 1.2rem;
     padding: 15px 5px;
-    width: auto;
+    flex-direction: column;
   }
 
   caption {
