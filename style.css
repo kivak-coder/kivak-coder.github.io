@@ -1,363 +1,500 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-body {
-  background: linear-gradient(135deg, #26673cf0, #2d5a2d, #c9a227);
-  background-attachment: fixed;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  min-height: 100vh;
-  padding: 20px;
-}
+        /* ГОЛУБОЙ ФОН — свежий и приятный */
+        body {
+            background: linear-gradient(135deg, #c1dcf0 0%, #7bb3db 100%);
+            font-family: 'Inter', sans-serif;
+            color: #2c2b28;
+            line-height: 1.5;
+            padding: 40px 24px;
+        }
 
-h1 {
-  color: #fff;
-  text-align: center;
-  font-family: 'Montserrat', 'Lucida Sans', sans-serif;
-  font-size: 4rem;
-  font-weight: 800;
-  text-transform: uppercase;
-  letter-spacing: 4px;
-  text-shadow: 3px 3px 0 rgba(0,0,0,0.2);
-  margin: 30px 0;
-  padding: 20px;
-  background: rgba(255,255,255,0.1);
-  backdrop-filter: blur(10px);
-  border-radius: 20px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-}
+        .page-wrapper {
+            max-width: 1280px;
+            margin: 0 auto;
+        }
 
-h2 {
-  font-family: 'Segoe UI', sans-serif;
-  font-size: 1.5rem;
-  color: #fff;
-  text-align: center;
-  margin: 20px 0;
-  padding: 15px;
-  background: rgba(0,0,0,0.3);
-  border-radius: 15px;
-  backdrop-filter: blur(5px);
-}
+        /* Герой-заголовок */
+        .hero {
+            text-align: center;
+            margin-bottom: 40px;
+        }
 
-h3 {
-  font-family: 'Segoe UI', sans-serif;
-  font-size: 1.5rem;
-  color: #fff;
-  text-align: center;
-  margin: 20px 0;
-  padding: 15px;
-  background: rgba(0,0,0,0.3);
-  border-radius: 15px;
-  backdrop-filter: blur(5px);
-}
+        .club-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            color: #2a5c4a;
+            text-transform: uppercase;
+            background: rgba(255,255,240,0.85);
+            display: inline-block;
+            padding: 0.8rem 2rem;
+            border-radius: 60px;
+            backdrop-filter: blur(4px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+        }
 
-h5 {
-  font-family: 'Segoe UI', sans-serif;
-  font-size: 1rem;
-  margin-left: 25px;
-  color: #687768e8;
-  margin-bottom: 0;
-}
+        .club-title span {
+            font-weight: 800;
+            color: #c49a2b;
+        }
 
-img.in-text:hover {
-  transform: translateY(-10px) scale(1.02);
-  box-shadow: 0 30px 60px rgba(0,0,0,0.4);
-  border-color: #c9a227;
-}
+        .hero-accent {
+            width: 80px;
+            height: 3px;
+            background: #c49a2b;
+            margin: 20px auto 0;
+            border-radius: 2px;
+        }
 
-table {
-  font-family: 'Segoe UI', sans-serif;
-  font-size: 1.2rem;
-  width: 100%;
-  max-width: 1100px;
-  margin: 40px auto;
-  border-collapse: separate;
-  border-spacing: 15px;
-  background: rgba(255,255,255,0.1);
-  backdrop-filter: blur(10px);
-  border-radius: 25px;
-  padding: 20px;
-}
+        /* Цитата */
+        .modern-quote {
+            background: #ffffffcc;
+            backdrop-filter: blur(8px);
+            border-radius: 48px;
+            padding: 32px 40px;
+            margin: 32px 0;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 24px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+            border: 1px solid rgba(196,154,43,0.2);
+        }
 
-caption {
-  color: #fff;
-  font-size: 1.8rem;
-  font-weight: bold;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  margin-bottom: 20px;
-  text-shadow: 2px 2px 0 rgba(0,0,0,0.3);
-}
+        .quote-symbol {
+            font-family: 'Playfair Display', serif;
+            font-size: 5rem;
+            font-weight: 700;
+            color: #c49a2b;
+            line-height: 1;
+            opacity: 0.6;
+        }
 
-td {
-  background: rgba(255, 248, 235, 0.9);
-  padding: 30px 20px;
-  text-align: center;
-  font-weight: 600;
-  color: #1a472a;
-  border-radius: 13px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-  transition: all 0.3s ease;
-  font-size: 1.6rem;
-  backdrop-filter: blur(5px);
-  border: 2px solid rgba(255,255,255,0.5);
-  width: 33%;
-}
+        .quote-text-wrapper {
+            flex: 2;
+        }
 
-a {
-  font-family: 'Segoe UI', sans-serif;
-  font-size: 1.5rem;
-  color: #fff;
-  text-align: center;
-  margin: 20px 0;
-  padding: 15px;
-  border-radius: 15px;
-  text-decoration: none;
-}
+        .quote-text {
+            font-size: 1.2rem;
+            font-weight: 450;
+            color: #2c3e2b;
+            line-height: 1.5;
+            margin-bottom: 12px;
+            font-style: normal;
+        }
 
-td:hover {
-  background: #fff;
-  transform: scale(1.05);
-  box-shadow: 0 15px 30px rgba(0,0,0,0.2);
-  border-color: #c9a227;
-}
+        .quote-author {
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+            font-size: 1rem;
+            color: #7e6b3c;
+            letter-spacing: 0.5px;
+        }
 
-.text-with-pic {
-  display: flex;
-  align-items: center;
-  gap: 30px;
-  margin: 30px 0;
-}
+        .quote-icon {
+            width: 85px;
+            height: auto;
+            opacity: 0.8;
+            border-radius: 20px;
+        }
 
-.text-with-pic.reverse {
-  flex-direction: row-reverse;
-}
+        /* Контактная плашка */
+        .contact-bar {
+            background: #2a5c4a;
+            border-radius: 60px;
+            text-align: center;
+            padding: 16px 24px;
+            margin: 20px 0 40px;
+            box-shadow: 0 8px 18px rgba(0,0,0,0.08);
+        }
 
-.text-with-pic .highlight {
-  flex: 1;
-  width: auto;
-  max-width: 50%;
-  padding: 30px;
-  font-size: 1.8rem;
-  font-weight: 550;
-  color: #1a2e1a;
-  background: linear-gradient(145deg, #eaaa42cf, #dfa91ee1);
-  border-radius: 40px;
-  margin-top: 0;
-  margin-left: 5px;
-  margin-right: 15px;
-}
+        .contact-phone {
+            font-size: 1.4rem;
+            font-weight: 500;
+            color: #fff3e0;
+        }
 
-.text-with-pic .in-text {
-  width: 60%;
-  max-width: 600px;
-  height: 350px;
-  object-fit: cover;
-  border-radius: 20px;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  border: 3px solid rgba(255,255,255,0.3);
-  float: none;
-  margin-left: 15px;
-  margin-right: 5px;
-}
+        .contact-phone strong {
+            font-weight: 800;
+            background: #c49a2b;
+            padding: 6px 16px;
+            border-radius: 40px;
+            margin-left: 12px;
+            color: #2a5c4a;
+        }
 
-.quote-block {
-  display: flex;
-  align-items: center;
-  gap: 30px;
-  margin: 30px 0;
-  background: rgba(0,0,0,0.2);
-  border-radius: 20px;
-  padding: 20px;
-}
+        /* Секции с картинкой и текстом */
+        .text-with-pic {
+            display: flex;
+            align-items: center;
+            gap: 32px;
+            margin: 48px 0;
+            background: #ffffffb3;
+            border-radius: 32px;
+            padding: 20px 28px;
+            backdrop-filter: blur(2px);
+            transition: all 0.2s;
+        }
 
-.quote-text {
-  flex: 1;
-  color: #fff;
-  font-size: 1.1rem;
-  font-weight: 300;
-  line-height: 1.5;
-  margin: 0;
-}
+        .text-with-pic.reverse {
+            flex-direction: row-reverse;
+        }
 
-.quote-icon {
-  width: 100px;
-  height: auto;
-  border-radius: 10px;
-}
+        .highlight {
+            flex: 1;
+            font-size: 1.45rem;
+            font-weight: 500;
+            color: #1f3b31;
+            background: rgba(255,245,225,0.7);
+            padding: 28px 24px;
+            border-radius: 28px;
+            line-height: 1.4;
+            border-left: 4px solid #c49a2b;
+        }
 
-.metro-info {
-  gap: 8px;
-}
+        .in-text {
+            width: 45%;
+            max-width: 450px;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 24px;
+            box-shadow: 0 12px 24px rgba(0,0,0,0.1);
+            transition: transform 0.25s ease;
+        }
 
-.metro-info img {
-  vertical-align: middle;
-}
+        .in-text:hover {
+            transform: scale(1.01);
+        }
 
-.map-container {
-  width: 100%;
-  margin: 20px 0;
-}
+        /* Локация: две карточки адресов */
+        .location-section {
+            margin: 60px 0 30px;
+        }
 
-.map-iframe {
-  width: 100%;
-  height: 400px;
-  border: none;
-  border-radius: 20px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-}
+        .section-heading {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.2rem;
+            font-weight: 600;
+            color: #fff;
+            text-align: center;
+            margin-bottom: 32px;
+            letter-spacing: -0.3px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+        }
 
-.services-row {
-  display: flex;
-  gap: 30px;
-  align-items: center;
-  margin: 40px 0;
-}
+        .metro-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: center;
+        }
 
-.services-icon {
-  width: 250px;
-  height: auto;
-  border-radius: 20px;
-}
+        .address-card {
+            flex: 1;
+            min-width: 260px;
+            background: #ffffffcc;
+            backdrop-filter: blur(4px);
+            border-radius: 32px;
+            padding: 28px 24px;
+            text-align: center;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+            border: 1px solid #e6ddcf;
+        }
 
-.social-block {
-  text-align: center;
-  margin: 40px 0;
-}
+        .address-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.6rem;
+            color: #c49a2b;
+            margin-bottom: 12px;
+        }
 
-.social-links {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap;
-}
+        .address-card p {
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: #2c5a48;
+            margin-bottom: 16px;
+        }
 
-.social-links a {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  background: rgba(255,255,255,0.2);
-  padding: 10px 20px;
-  border-radius: 40px;
-  font-size: 1.3rem;
-  transition: 0.3s;
-}
+        .metro-stations {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
 
-.social-links a:hover {
-  background: #c9a227;
-  color: #1a472a;
-}
+        .metro-stations span {
+            background: #e9e2d4;
+            padding: 6px 16px;
+            border-radius: 40px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
 
-.social-links img {
-  width: 30px;
-  height: 30px;
-}
+        .metro-stations img {
+            width: 28px;
+            vertical-align: middle;
+        }
 
-/* Адаптивность для мобильных устройств (все правила в одном блоке) */
-@media (max-width: 768px) {
-  h1 {
-    font-size: 2rem;
-    letter-spacing: 2px;
-  }
+        /* Карты рядом */
+        .maps-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin: 40px 0 60px;
+        }
 
-  h3 {
-    font-size: 1.2rem;
-  }
+        .map-card {
+            flex: 1;
+            background: #fff6ea;
+            border-radius: 32px;
+            overflow: hidden;
+            box-shadow: 0 12px 24px rgba(0,0,0,0.08);
+            transition: all 0.2s;
+        }
 
-  .quote-block {
-    flex-direction: column;
-    text-align: center;
-  }
+        .map-iframe {
+            width: 100%;
+            height: 320px;
+            border: none;
+            display: block;
+        }
 
-  .quote-icon {
-    margin-top: 10px;
-  }
+        .map-label {
+            display: block;
+            text-align: center;
+            padding: 14px;
+            background: #fef7e6;
+            font-weight: 500;
+            color: #2a5c4a;
+            border-top: 1px solid #e4d9c8;
+        }
 
-  .text-with-pic,
-  .text-with-pic.reverse {
-    flex-direction: column !important;
-    gap: 15px;
-  }
+        /* Услуги — карточки */
+        .services-main {
+            margin: 40px 0 50px;
+        }
 
-  .text-with-pic .highlight,
-  .text-with-pic .in-text {
-    max-width: 100%;
-    width: 100%;
-    margin: 0;
-  }
+        .services-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 32px;
+            justify-content: center;
+        }
 
-  .text-with-pic .highlight {
-    font-size: 1.4rem;
-    padding: 20px;
-  }
+        .service-card {
+            flex: 1;
+            min-width: 280px;
+            background: #ffffffdb;
+            backdrop-filter: blur(8px);
+            border-radius: 40px;
+            padding: 28px 24px 32px;
+            box-shadow: 0 20px 35px rgba(0,0,0,0.05);
+            transition: transform 0.2s;
+            border: 1px solid #f1e7db;
+        }
 
-  .services-row {
-    flex-direction: column;
-    gap: 20px;
-  }
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
 
-  .services-icon {
-    width: 200px;
-    margin: 0 auto;
-  }
+        .card-header {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 24px;
+            border-bottom: 2px solid #e9cf9e;
+            padding-bottom: 16px;
+        }
 
-  table {
-    flex-direction: column;
-    font-size: 1rem;
-    border-spacing: 8px;
-  }
+        .card-icon {
+            width: 52px;
+            height: auto;
+            border-radius: 20px;
+            background: #f3ede4;
+            padding: 6px;
+        }
 
-  td {
-    font-size: 1.2rem;
-    padding: 15px 5px;
-    flex-direction: column;
-  }
+        .card-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.7rem;
+            font-weight: 600;
+            color: #2a5c4a;
+            margin: 0;
+        }
 
-  caption {
-    font-size: 1.5rem;
-  }
+        .price-list {
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+        }
 
-  .map-iframe {
-    height: 300px;
-  }
+        .price-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            padding: 8px 4px;
+            border-bottom: 1px dashed #ddd2c0;
+        }
 
-  .social-links {
-    flex-direction: column;
-    align-items: center;
-  }
+        .service-name {
+            font-weight: 500;
+            font-size: 1.1rem;
+            color: #3a3a37;
+        }
 
-  .social-links a {
-    width: 80%;
-    justify-content: center;
-  }
+        .service-price {
+            font-weight: 700;
+            font-size: 1.2rem;
+            color: #c49a2b;
+            background: #fff2e2;
+            padding: 4px 12px;
+            border-radius: 40px;
+        }
 
-  .metro-info h3 {
-    font-size: 1rem;
-  }
+        .group-note {
+            margin-top: 24px;
+            font-size: 0.85rem;
+            color: #8b7652;
+            text-align: center;
+            font-style: italic;
+            background: #fbf5ea;
+            padding: 10px;
+            border-radius: 30px;
+        }
 
-  .metro-info img {
-    width: 25px;
-  }
-}
+        /* Соцблок */
+        .social-block {
+            text-align: center;
+            margin: 60px 0 40px;
+            background: rgba(255,255,240,0.3);
+            backdrop-filter: blur(4px);
+            padding: 32px 20px;
+            border-radius: 48px;
+        }
 
-.full-width {
-  width: 100%;
-  /* max-width: 1200px; */
-  height: auto;
-  object-fit: contain;
-  display: block;
-  margin: 30px auto;
-  border-radius: 30px;
-  box-shadow: 0 25px 50px rgba(0,0,0,0.5);
-}
+        .social-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            color: #fff;
+            text-shadow: 1px 1px 0 rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
 
-p {
-  color: rgba(255,255,255,0.9);
-  text-align: center;
-  font-size: 1.1rem;
-  margin-top: 10px;
-  text-shadow: 1px 1px 0 rgba(0,0,0,0.2);
-}
+        .social-links {
+            display: flex;
+            justify-content: center;
+        }
+
+        .social-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            background: #2a5c4a;
+            color: white;
+            padding: 14px 32px;
+            border-radius: 60px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.2rem;
+            transition: all 0.2s;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .social-btn img {
+            width: 28px;
+            height: 28px;
+            filter: brightness(0) invert(1);
+        }
+
+        .social-btn:hover {
+            background: #c49a2b;
+            color: #1f3b31;
+            transform: scale(1.02);
+        }
+
+        .social-footnote {
+            margin-top: 18px;
+            font-size: 0.9rem;
+            color: #f0f4fa;
+            font-weight: 500;
+        }
+
+        /* Футер */
+        .footer {
+            text-align: center;
+            padding: 24px;
+            margin-top: 40px;
+            color: #fff3e0;
+            border-top: 1px solid rgba(255,255,210,0.3);
+            font-size: 0.9rem;
+        }
+
+        /* Адаптивность */
+        @media (max-width: 860px) {
+            body {
+                padding: 20px 16px;
+            }
+
+            .club-title {
+                font-size: 2.2rem;
+                padding: 0.4rem 1rem;
+            }
+
+            .text-with-pic, .text-with-pic.reverse {
+                flex-direction: column !important;
+                padding: 20px;
+            }
+
+            .in-text {
+                width: 100%;
+                max-width: 100%;
+                height: auto;
+                max-height: 280px;
+            }
+
+            .highlight {
+                font-size: 1.2rem;
+                width: 100%;
+                text-align: center;
+            }
+
+            .modern-quote {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .quote-symbol {
+                display: none;
+            }
+
+            .contact-phone {
+                font-size: 1rem;
+            }
+
+            .contact-phone strong {
+                display: inline-block;
+                margin-top: 8px;
+                margin-left: 0;
+            }
+
+            .maps-grid {
+                flex-direction: column;
+            }
+
+            .services-grid {
+                flex-direction: column;
+            }
+
+            .card-title {
+                font-size: 1.4rem;
+            }
+        }
