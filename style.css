@@ -497,4 +497,17 @@ body {
     .card-title {
         font-size: 1.4rem;
     }
+
+    .social-links {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 16px;
+    }
+    
+    .social-links .social-btn {
+        width: 100%;
+        box-sizing: border-box;
+        justify-content: center;
+        text-align: center;
+    }
 }
