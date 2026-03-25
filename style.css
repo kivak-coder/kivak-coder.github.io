@@ -390,7 +390,7 @@ body {
 }
 
 .social-links {
-    display: inline-flex;
+    display: flex;
     justify-content: center;
 }
 
