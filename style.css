@@ -437,6 +437,55 @@ body {
     border-top: 1px solid rgba(255,255,210,0.3);
     font-size: 0.9rem;
 }
+/* Стиль для кнопки звонка */
+.phone-call-btn {
+    display: inline-block;
+    background: #c49a2b;        /* золотистый, как акценты на сайте */
+    color: #2a5c4a;             /* тёмно-зелёный текст — хороший контраст */
+    font-weight: 800;
+    font-size: 1.3rem;
+    padding: 8px 24px;
+    border-radius: 60px;
+    text-decoration: none;      /* убираем стандартное подчёркивание */
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    letter-spacing: 0.5px;
+}
+
+.phone-call-btn:hover {
+    background: #e0b354;        /* светлее при наведении */
+    transform: scale(1.02);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.phone-call-btn:active {
+    transform: scale(0.98);
+}
+
+/* подсказка "(нажмите, чтобы позвонить)" */
+.copy-hint {
+    font-size: 0.75rem;
+    color: #fff3e0;
+    background: rgba(255,255,240,0.2);
+    padding: 4px 12px;
+    border-radius: 30px;
+    margin-left: 12px;
+    white-space: nowrap;
+}
+
+/* на мобильных устройствах подсказку можно перенести на новую строку */
+@media (max-width: 560px) {
+    .copy-hint {
+        display: block;
+        margin-left: 0;
+        margin-top: 8px;
+        white-space: normal;
+    }
+    .phone-call-btn {
+        font-size: 1.1rem;
+        padding: 6px 18px;
+    }
+}
 
 /* Адаптивность */
 @media (max-width: 860px) {
@@ -478,6 +527,7 @@ body {
 
     .contact-phone {
         font-size: 1rem;
+        user-select: all;  
     }
 
     .contact-phone strong {
