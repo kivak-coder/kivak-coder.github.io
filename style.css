@@ -4,18 +4,52 @@
     box-sizing: border-box;
 }
 
+/* Переносим градиент на html, чтобы орнамент был поверх него, но под контентом */
+html {
+    background: linear-gradient(135deg, #c1dcf0 0%, #7bb3db 100%);
+    height: 100%;
+}
+
 /* ГОЛУБОЙ ФОН — свежий и приятный */
 body {
-    background: linear-gradient(135deg, #c1dcf0 0%, #7bb3db 100%);
+    background: transparent; /* Прозрачный, чтобы был виден градиент html */
     font-family: 'Inter', sans-serif;
     color: #2c2b28;
     line-height: 1.5;
     padding: 40px 24px;
+    position: relative;
+    min-height: 100vh;
+}
+
+/* БОКОВОЙ ОРНАМЕНТ (Ромбы/сетка) */
+body::before,
+body::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 120px; /* Ширина орнамента */
+    /* Встроенный SVG в виде ромбов (цвет темно-зеленый #2a5c4a с прозрачностью) */
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 0L60 30L30 60L0 30z' fill='none' stroke='%232a5c4a' stroke-opacity='0.12' stroke-width='2'/%3E%3C/svg%3E");
+    background-repeat: repeat-y;
+    background-size: 60px 60px;
+    z-index: -1; /* Уводим за контент */
+    pointer-events: none; /* Чтобы не мешал выделять текст */
+}
+
+body::before {
+    left: 0;
+}
+
+body::after {
+    right: 0;
 }
 
 .page-wrapper {
     max-width: 1280px;
     margin: 0 auto;
+    position: relative;
+    z-index: 1; /* Контент поверх орнамента */
 }
 
 /* Герой-заголовок */
@@ -264,13 +298,12 @@ body {
 /* Обертка, которая обрезает рекламу Яндекса */
 .map-wrapper {
     width: 100%;
-    height: 320px;      /* Видимая высота карты */
-    overflow: hidden;   /* Скрываем всё лишнее */
+    height: 320px;
+    overflow: hidden;
     position: relative;
     background: #e5e3df;
 }
 
-/* Iframe делаем выше, чтобы его низ с рекламой ушел за границу */
 .map-iframe {
     width: 100%;
     height: 380px;      
@@ -313,12 +346,14 @@ body {
     border-radius: 40px;
     padding: 28px 24px 32px;
     box-shadow: 0 20px 35px rgba(0,0,0,0.05);
-    transition: transform 0.2s;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
     border: 1px solid #f1e7db;
 }
 
 .service-card:hover {
     transform: translateY(-5px);
+    border-color: #c49a2b;
+    box-shadow: 0 15px 30px rgba(196, 154, 43, 0.15);
 }
 
 .card-header {
@@ -488,6 +523,31 @@ body {
     white-space: nowrap;
 }
 
+/* Плавающая кнопка звонка в углу экрана */
+.floating-call-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    background-color: #c49a2b;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    z-index: 1000;
+    text-decoration: none;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.floating-call-btn:hover {
+    transform: scale(1.1);
+    background-color: #e0b354;
+}
+
 /* на мобильных устройствах подсказку можно перенести на новую строку */
 @media (max-width: 560px) {
     .copy-hint {
@@ -499,6 +559,13 @@ body {
     .phone-call-btn {
         font-size: 1.1rem;
         padding: 6px 18px;
+    }
+    .floating-call-btn {
+        bottom: 20px;
+        right: 20px;
+        width: 50px;
+        height: 50px;
+        font-size: 24px;
     }
 }
 
@@ -574,5 +641,13 @@ body {
         box-sizing: border-box;
         justify-content: center;
         text-align: center;
+    }
+}
+
+/* Скрываем орнамент на экранах, где он может помешать контенту */
+@media (max-width: 1350px) {
+    body::before,
+    body::after {
+        display: none;
     }
 }

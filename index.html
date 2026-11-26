@@ -11,16 +11,19 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="images/icon_ball_img.png">
     
+    <!-- Стили для анимации при скролле (AOS) -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <div class="page-wrapper">
-    <div class="hero">
+    <div class="hero" data-aos="fade-down">
         <h1 class="club-title">ТЕННИСНЫЙ КЛУБ <span>МАИ</span></h1>
         <div class="hero-accent"></div>
     </div>
 
-    <div class="modern-quote">
+    <div class="modern-quote" data-aos="fade-up">
         <div class="quote-symbol">“</div>
         <div class="quote-text-wrapper">
             <p class="quote-text">
@@ -33,7 +36,7 @@
         <img src="images/icon2_img.png" class="quote-icon" alt="Эмблема клуба">
     </div>
 
-    <div class="contact-bar">
+    <div class="contact-bar" data-aos="fade-up" data-aos-delay="100">
     <span class="contact-phone">
         📞 Для записи звоните: 
         <a href="tel:+79772832263" class="phone-call-btn">+7 (977) 283-22-63</a>
@@ -41,14 +44,14 @@
     </span>
     </div>
 
-    <div class="text-with-pic">
+    <div class="text-with-pic" data-aos="fade-right">
         <p class="highlight">  
             Мечтаешь научиться играть в теннис как <u>профессионал</u>? Хочешь поддерживать форму, забыть о стрессе и проводить время с <u>пользой</u>?
         </p>
         <img class="in-text" src="images/raq_img.jpg" alt="Теннисная ракетка">
     </div>
 
-    <div class="text-with-pic reverse">
+    <div class="text-with-pic reverse" data-aos="fade-left">
         <p class="highlight">
             <u>Теннисный клуб МАИ</u> открыт для всех, кто готов покорять корт и достигать новых высот!
             <br><b>Играй и побеждай!</b> 🎾🏆
@@ -57,9 +60,9 @@
     </div>
 
     <div class="location-section">
-        <h2 class="section-heading">📍 Наши корты</h2>
+        <h2 class="section-heading" data-aos="fade-up">📍 Наши корты</h2>
         <div class="metro-info">
-            <div class="address-card">
+            <div class="address-card" data-aos="zoom-in">
                 <h3>Площадка 1</h3>
                 <p>г. Москва, ул. Константина Царева д. 10а</p>
                 <div class="metro-stations">
@@ -67,7 +70,7 @@
                     <span><img src="images/2_img.png" alt="Метро"> Войковская</span>
                 </div>
             </div>
-            <div class="address-card">
+            <div class="address-card" data-aos="zoom-in" data-aos-delay="100">
                 <h3>Площадка 2</h3>
                 <p>г. Москва, ул. Вилиса Лациса, д.16</p>
                 <div class="metro-stations">
@@ -79,13 +82,13 @@
 
     <!-- Блок с Яндекс.Картами -->
     <div class="maps-grid">
-        <div class="map-card">
+        <div class="map-card" data-aos="fade-up">
             <div class="map-wrapper">
                 <iframe src="https://yandex.ru/map-widget/v1/?ll=37.495303%2C55.812985&mode=whatshere&utm_source=share&whatshere%5Bpoint%5D=37.495303%2C55.812985&whatshere%5Bzoom%5D=17&z=17&scroll=false" class="map-iframe" allowfullscreen="true" loading="lazy"></iframe>
             </div>
             <span class="map-label">ул. Константина Царева, 10а</span>
         </div>
-        <div class="map-card">
+        <div class="map-card" data-aos="fade-up" data-aos-delay="100">
             <div class="map-wrapper">
                 <iframe src="https://yandex.ru/map-widget/v1/?ll=37.423383%2C55.863719&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgg1Njc5MDgzOBJE0KDQvtGB0YHQuNGPLCDQnNC-0YHQutCy0LAsINGD0LvQuNGG0LAg0JLQuNC70LjRgdCwINCb0LDRhtC40YHQsCwgMTYiCg3zrhVCFZR0X0I%2C&z=16.84&scroll=false" class="map-iframe" allowfullscreen="true" loading="lazy"></iframe>
             </div>
@@ -94,9 +97,9 @@
     </div>
 
     <div class="services-main">
-        <h2 class="section-heading">🎾 Выбери свой формат</h2>
+        <h2 class="section-heading" data-aos="fade-up">🎾 Выбери свой формат</h2>
         <div class="services-grid">
-            <div class="service-card">
+            <div class="service-card" data-aos="fade-up">
                 <div class="card-header">
                     <img src="images/icon_img.png" class="card-icon" alt="Теннисист">
                     <h3 class="card-title">Индивидуальные тарифы</h3>
@@ -108,7 +111,7 @@
                 </div>
             </div>
 
-            <div class="service-card">
+            <div class="service-card" data-aos="fade-up" data-aos-delay="100">
                 <div class="card-header">
                     <img src="images/icon_img.png" class="card-icon" alt="Группы">
                     <h3 class="card-title">Группы по уровням</h3>
@@ -123,7 +126,7 @@
         </div>
     </div>
 
-    <div class="social-block">
+    <div class="social-block" data-aos="fade-up">
         <h3 class="social-title">Подписывайтесь на наши соцсети</h3>
         <div class="social-links" style="gap:40px">
             <a href="https://t.me/tennismai" target="_blank" rel="noopener noreferrer" class="social-btn telegram">
@@ -141,5 +144,21 @@
         <p>Теннисный клуб МАИ</p>
     </footer>
 </div>
+
+<!-- Плавающая кнопка звонка -->
+<a href="tel:+79772832263" class="floating-call-btn" aria-label="Позвонить">
+    📞
+</a>
+
+<!-- Скрипты для анимации при скролле -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({ 
+      duration: 800, 
+      once: true, 
+      offset: 50 
+  });
+</script>
+
 </body>
 </html>
