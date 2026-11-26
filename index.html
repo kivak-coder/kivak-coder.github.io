@@ -4,12 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>Теннисный клуб МАИ</title>
+    
+    <!-- Шрифты и иконка -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="images/icon_ball_img.png">
-  
+    
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <div class="page-wrapper">
@@ -75,13 +77,18 @@
         </div>
     </div>
 
+    <!-- Блок с Яндекс.Картами -->
     <div class="maps-grid">
         <div class="map-card">
-            <iframe src="https://yandex.ru/map-widget/v1/?ll=37.495303%2C55.812985&mode=whatshere&utm_source=share&whatshere%5Bpoint%5D=37.495303%2C55.812985&whatshere%5Bzoom%5D=17&z=17" class="map-iframe" allowfullscreen="true" loading="lazy"></iframe>
+            <div class="map-wrapper">
+                <iframe src="https://yandex.ru/map-widget/v1/?ll=37.495303%2C55.812985&mode=whatshere&utm_source=share&whatshere%5Bpoint%5D=37.495303%2C55.812985&whatshere%5Bzoom%5D=17&z=17&scroll=false" class="map-iframe" allowfullscreen="true" loading="lazy"></iframe>
+            </div>
             <span class="map-label">ул. Константина Царева, 10а</span>
         </div>
         <div class="map-card">
-            <iframe src="https://yandex.ru/map-widget/v1/?ll=37.423383%2C55.863719&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgg1Njc5MDgzOBJE0KDQvtGB0YHQuNGPLCDQnNC-0YHQutCy0LAsINGD0LvQuNGG0LAg0JLQuNC70LjRgdCwINCb0LDRhtC40YHQsCwgMTYiCg3zrhVCFZR0X0I%2C&z=16.84" class="map-iframe" allowfullscreen="true" style="position:relative;" loading="lazy"></iframe>
+            <div class="map-wrapper">
+                <iframe src="https://yandex.ru/map-widget/v1/?ll=37.423383%2C55.863719&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgg1Njc5MDgzOBJE0KDQvtGB0YHQuNGPLCDQnNC-0YHQutCy0LAsINGD0LvQuNGG0LAg0JLQuNC70LjRgdCwINCb0LDRhtC40YHQsCwgMTYiCg3zrhVCFZR0X0I%2C&z=16.84&scroll=false" class="map-iframe" allowfullscreen="true" loading="lazy"></iframe>
+            </div>
             <span class="map-label">ул. Вилиса Лациса, 16</span>
         </div>
     </div>
