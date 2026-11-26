@@ -4,52 +4,18 @@
     box-sizing: border-box;
 }
 
-/* Переносим градиент на html, чтобы орнамент был поверх него, но под контентом */
-html {
-    background: linear-gradient(135deg, #c1dcf0 0%, #7bb3db 100%);
-    height: 100%;
-}
-
-/* ГОЛУБОЙ ФОН — свежий и приятный */
 body {
-    background: transparent; /* Прозрачный, чтобы был виден градиент html */
+    background: linear-gradient(135deg, #c1dcf0 0%, #7bb3db 100%);
     font-family: 'Inter', sans-serif;
     color: #2c2b28;
     line-height: 1.5;
     padding: 40px 24px;
-    position: relative;
     min-height: 100vh;
-}
-
-/* БОКОВОЙ ОРНАМЕНТ (Ромбы/сетка) */
-body::before,
-body::after {
-    content: "";
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    width: 120px; /* Ширина орнамента */
-    /* Встроенный SVG в виде ромбов (цвет темно-зеленый #2a5c4a с прозрачностью) */
-    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 0L60 30L30 60L0 30z' fill='none' stroke='%232a5c4a' stroke-opacity='0.12' stroke-width='2'/%3E%3C/svg%3E");
-    background-repeat: repeat-y;
-    background-size: 60px 60px;
-    z-index: -1; /* Уводим за контент */
-    pointer-events: none; /* Чтобы не мешал выделять текст */
-}
-
-body::before {
-    left: 0;
-}
-
-body::after {
-    right: 0;
 }
 
 .page-wrapper {
     max-width: 1280px;
     margin: 0 auto;
-    position: relative;
-    z-index: 1; /* Контент поверх орнамента */
 }
 
 /* Герой-заголовок */
@@ -304,6 +270,18 @@ body::after {
     background: #e5e3df;
 }
 
+/* Новый невидимый щит для карты */
+.map-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 5; /* Поверх iframe */
+    background: transparent;
+    cursor: pointer;
+}
+
 .map-iframe {
     width: 100%;
     height: 380px;      
@@ -312,6 +290,7 @@ body::after {
     position: absolute;
     top: 0;
     left: 0;
+    z-index: 1; /* Под щитом */
 }
 
 .map-label {
@@ -641,13 +620,5 @@ body::after {
         box-sizing: border-box;
         justify-content: center;
         text-align: center;
-    }
-}
-
-/* Скрываем орнамент на экранах, где он может помешать контенту */
-@media (max-width: 1350px) {
-    body::before,
-    body::after {
-        display: none;
     }
 }
